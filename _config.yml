@@ -15,18 +15,14 @@ logo:             images/logo.png # logo visible in the topbar
 #   To create sub categories. add a submenu item
 # See the example
 menu:
-  - title: 'Home'
+  - title: '首页'
     url: '/'
-  - title: 'Categories'
+  - title: '分类们'
     url: '/categories'
     type: 'categories'
-  - title: 'Tags'
+  - title: '标签们'
     url: '/tags'
-  - title: 'Fork'
-    url: 'http://github.com/aron-bordin/neo-hpstr-jekyll-theme'
-  - title: 'Install'
-    url: '/theme-setup/'
-  - title: 'Favorites'
+  - title: '最爱们'
     url: '#'
     submenu:
       - title: 'Code Highlighter'
