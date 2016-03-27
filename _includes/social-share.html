@@ -14,13 +14,19 @@
 
 
 
+<input type="button" value="点击这里" onclick="sAlert('测试效果<br>还可以直接书写HTML代码 <br>© 2006');" />
+
 <script type="text/javascript" language="javascript">
+//Author:Daviv
+//Blog:http://blog.163.com/jxdawei
+//Date:2006-10-28
+//Email:jxdawei@gmail.com
             function sAlert(str){
             var msgw,msgh,bordercolor;
             msgw=400;//提示窗口的宽度
-            msgh=100;//提示窗口的高度
-            bordercolor="#336699";//提示窗口的边框颜色
-            titlecolor="#99CCFF";//提示窗口的标题颜色
+            msgh=400;//提示窗口的高度
+            bordercolor="#2e2e2e";//提示窗口的边框颜色
+            titlecolor="#2e2e2e";//提示窗口的标题颜色
             
             var sWidth,sHeight;
             sWidth=document.body.offsetWidth;
@@ -42,7 +48,7 @@
             msgObj.setAttribute("id","msgDiv");
             msgObj.setAttribute("align","center");
             msgObj.style.position="absolute";
-            msgObj.style.background="white";
+            msgObj.style.background="#2e2e2e";
             msgObj.style.font="12px/1.6em Verdana, Geneva, Arial, Helvetica, sans-serif";
             msgObj.style.border="1px solid " + bordercolor;
             msgObj.style.width=msgw + "px";
@@ -62,7 +68,7 @@
           title.style.font="12px Verdana, Geneva, Arial, Helvetica, sans-serif";
           title.style.color="white";
           title.style.cursor="pointer";
-          title.innerHTML="关闭";
+          title.innerHTML="X";
           title.onclick=function(){
             document.body.removeChild(bgObj);
         document.getElementById("msgDiv").removeChild(title);
@@ -76,17 +82,7 @@
           txt.innerHTML=str;
       document.getElementById("msgDiv").appendChild(txt);
       }
-        </script>
-
-
-
-
-
-
-
-
-
-
+</script>
 
 
 
