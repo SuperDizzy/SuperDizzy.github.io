@@ -3,12 +3,38 @@
    
      function clik(){
 
-        alert('扫描二维码');
+        showHint();
 
         $('#divcenter').show();
 
-        alert('ccccc');
+        
      };
+
+function showHint() {
+  
+  var xmlHttp = null;
+
+  try { // Firefox, Opera 8.0+, Safari, IE7
+    xmlHttp = new XMLHttpRequest();
+  } catch (e) { // Old IE
+    try {
+      xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+    } catch (e) {
+      alert("Your browser does not support plealse choose other way !");
+      return;
+    }
+  }
+  
+  var url = "http://qr.liantu.com/api.php?&text=http://www.superdizzy.com{{ page.url }}";
+  url = url + "&sid=" + Math.random();
+  xmlHttp.open("GET", url, false);
+  xmlHttp.send(null);
+
+  alert(url);
+
+}
+
+
 </script>
 
 
@@ -119,12 +145,6 @@
           </ul>
 </div><!-- /.social-share -->
 
-<div id="divcenter" style="display:none;width:80%;height:80%;color:#F00" align="center">
-    <img src="">
-    fghjkkkkkkkkkkkkkkkkkkkkkkkk00000000000000000000000
-    dfghjkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
-    aiiaiiioooooooooooooooooooooooooooooooooooooooooooo
-</div>
 
 
 
