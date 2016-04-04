@@ -3,41 +3,10 @@
    
      function clik(){
 
-        showHint();
-
-        $('#divcenter').show();
+        $('#imgid').show();
 
         
      };
-
-function showHint() {
-  
-  var xmlHttp = null;
-
-  try { // Firefox, Opera 8.0+, Safari, IE7
-    xmlHttp = new XMLHttpRequest();
-  } catch (e) { // Old IE
-    try {
-      xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
-    } catch (e) {
-      alert("Your browser does not support plealse choose other way !");
-      return;
-    }
-  }
-  
-  var url = "http://qr.liantu.com/api.php?&text=http://www.superdizzy.com{{ page.url }}";
-  url = url + "&sid=" + Math.random();
-  xmlHttp.open("GET", url, false);
-  xmlHttp.send(null);
-
-  alert(url);
-
-}
-
-
-</script>
-
-
 
 
 <script type="text/javascript" language="javascript">
@@ -127,8 +96,9 @@ function showHint() {
 
 
         <li class="facebook2">
-           <a href="javascript:void(0);" id="atxt" title="扫码测试二" onclick="sAlert()"</a>
-           <span class="count"><i class="fa fa-twitter-square"></i> 分享到微信2</span></a></li>
+           <a href="javascript:void(0);" id="atxt" title="扫码测试二" onclick="clik()"</a>
+           <span class="count"><i class="fa fa-twitter-square"></i>weixin</span></a></li>
+
 
 
 
@@ -144,6 +114,10 @@ function showHint() {
         </a>
           </ul>
 </div><!-- /.social-share -->
+
+<div id="imgid" style="display:none">
+<img src="http://qr.topscan.com/api.php?text=http://www.superdizzy.com{{ page.url }}"/>
+</div>
 
 
 
