@@ -4,8 +4,13 @@
   
      function clik(){
 
-         var browser_width = $(document.body).width(); 
-         var browser_height = $(document.body).height();
+         //var browser_width = $(document.body).width(); 
+         var browser_width = $(window).width();
+         
+         //var browser_height = $(document.body).height();
+         var browser_height = $(window).height();
+
+
          $("div.fa").css("width",browser_width); 
          $("div.fa").css("height",browser_height); 
 
