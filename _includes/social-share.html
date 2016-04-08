@@ -4,19 +4,20 @@
   
      function clik(){
 
-        alert('ok');
         $('#imgid').show();
-        alert('over');
-
         
      };
+     function close(){
+      alert('关闭二维码');
+      document.getElementById('imgid').style.display='none';
+     }
 </script>
 
 
 
 
-<div id="imgid" style="border:8px solid blue;display:none">
-    <h1>x</h1>
+<div id="imgid" style="border:3px solid blue;display:none">
+    <h1 id="close" onclick="close()">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x</h1>
     <img src="http://qr.topscan.com/api.php?text=http://www.superdizzy.com{{ page.url }}"/>
 </div>
 
