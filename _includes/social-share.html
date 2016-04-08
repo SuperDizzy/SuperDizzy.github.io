@@ -7,16 +7,19 @@
         $('#imgid').show();
         
      };
+
      function close(){
       alert('关闭二维码');
       document.getElementById('imgid').style.display='none';
-     }
+     };
+
 </script>
 
 
 
-<h1 id="close" onclick="close()">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x</h1>
+
 <div id="imgid" style="border:1px solid blue;display:none;">
+    <h1 id="close" style="position:absolute; top:0; right:0; z-index:99;" onclick="close()"><font color='red'>x</font></h1>
     <img src="http://qr.topscan.com/api.php?text=http://www.superdizzy.com{{ page.url }}"/>
 </div>
 
