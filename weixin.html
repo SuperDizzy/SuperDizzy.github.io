@@ -6,6 +6,22 @@
 	#chlidren{position:fixed;left:45%;top:30%;margin-left:width/2;margin-top:height/2}
 	#sp{position:fixed;left:44.5%;top:56%;margin-left:width/2;margin-top:height/2}
 </style>
+
+<script type="text/javascript">
+
+//获得参数url
+var url = getQueryString("url"); //接收url这个名字的参数
+
+        function getQueryString(value) {
+            var reg = new RegExp("(^|&)" + value + "=([^&]*)(&|$)", "i");
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null) return unescape(r[2]); return null;
+        }
+// 设置img 的src 
+$("#imgId").attr('src',url); 
+</script>
+
+
 <html >
 	<head>
 		<meta charset="{CHARSET}">
@@ -22,7 +38,7 @@
 			</span>
 		<div id="fa">
 			<div id="chlidren">
-				<img src="http://qr.topscan.com/api.php?text=http://www.superdizzy.com{{ page.url }}"/>
+				<img id="imgId" src="http://qr.topscan.com/api.php?text=http://www.superdizzy.com{{ page.url }}"/>
 			</div>
 		</div>
 	</body>
