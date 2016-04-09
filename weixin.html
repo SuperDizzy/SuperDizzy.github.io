@@ -20,6 +20,9 @@ var url = getQueryString("url"); //接收url这个名字的参数
             if (r != null) return unescape(r[2]); return null;
         }
  var text="http://qr.topscan.com/api.php?text="+url
+
+ alert('url=>>'+url);
+ alert(text);
 // 设置img 的src 
 $("#imgId").attr('src',text); 
 	
