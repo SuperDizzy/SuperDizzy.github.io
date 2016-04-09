@@ -1,6 +1,19 @@
 
 <script language="javascript" type="text/javascript">
 
+
+     $(function() {
+       //页面加载完成立即获取当前页面的url
+       var temp=window.location.href;
+
+       $('#weixinhr').click(function(){
+
+        var res = "http://www.superdizzy.com/weixin.html?url="+temp
+
+        window.location.href=res;
+       });
+     });
+
   
      function clik(){
 
@@ -54,10 +67,10 @@
 <div class="social-share">
   <ul class="socialcount socialcount-small inline-list">
     
-        <li class="facebook"><a href="http://service.weibo.com/share/share.php?url=http://www.superdizzy.com{{ page.url }}&title=分享一篇博文" title="分享到微博" target="_blank"><span class="count"><i class="fa fa-facebook-square"></i> Like</span></a></li>
+        <li class="facebook"><a id="weibo" href="http://service.weibo.com/share/share.php?url=http://www.superdizzy.com{{ page.url }}&title=分享一篇博文" title="分享到微博" target="_blank"><span class="count"><i class="fa fa-facebook-square"></i> Like</span></a></li>
 
 
-        <li class="twitter"><a href="http://www.superdizzy.com/weixin.html?url=http://www.superdizzy.com{{ page.url }}" title="扫码分享到微信" target="_blank"><span class="count"><i class="fa fa-twitter-square"></i> 分享到微信</span></a></li>
+        <li class="twitter"><a id="weixinhr" href="javascript:void(0);" title="扫码分享到微信" target="_blank"><span class="count"><i class="fa fa-twitter-square"></i> 分享到微信</span></a></li>
  
 
 
