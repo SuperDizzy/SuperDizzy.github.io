@@ -7,24 +7,6 @@
 	#sp{position:fixed;left:44.5%;top:56%;margin-left:width/2;margin-top:height/2}
 </style>
 
-<script type="text/javascript">
-
-$(function () {
-
-//获得参数url
-var str=window.location.href;
-var num = str.indexOf('=');
-var strtemp=ste.substring(num+1);
-var text="http://qr.topscan.com/api.php?text="+strtemp;
- 
-// 设置img 的src 
-$("#imgId").attr('src',text); 
-	
-});
-
-
-</script>
-
 
 <html >
 	<head>
@@ -42,8 +24,26 @@ $("#imgId").attr('src',text);
 			</span>
 		<div id="fa">
 			<div id="chlidren">
-				<img id="imgId" />
+				<img id="imgId" src=""/>
 			</div>
 		</div>
 	</body>
 </html>
+
+<script type="text/javascript">
+
+$(function () {
+
+//获得参数url
+var str=window.location.href;
+var num = str.indexOf('=');
+var strtemp=ste.substring(num+1);
+var text="http://qr.topscan.com/api.php?text="+strtemp;
+ 
+// 设置img 的src 
+$("#imgId").attr('src',text); 
+	
+});
+
+
+</script>
