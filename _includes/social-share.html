@@ -4,15 +4,24 @@
 
      $(function() {
        //页面加载完成立即获取当前页面的url
-       var temp=window.location.href;
+       // var temp=window.location.href;
 
-       $('#weixinhr').click(function(){
+       // $('#weixinhr').click(function(){
 
-        var res = "http://www.superdizzy.com/weixin.html?url="+temp
+       //  var res = "http://www.superdizzy.com/weixin.html?url="+temp
 
-        window.location.href=res;
-       });
+       //  window.location.href=res;
+       // });
      });
+
+
+    function share(){
+       var thisurl=window.location.href;
+       var targeturl="http://www.superdizzy.com/weixin.html?url="
+       var resurl=targeturl+thisurl
+       window.location.href=resurl;
+
+    };
 
   
      function clik(){
@@ -70,7 +79,7 @@
         <li class="facebook"><a id="weibo" href="http://service.weibo.com/share/share.php?url=http://www.superdizzy.com{{ page.url }}&title=分享一篇博文" title="分享到微博" target="_blank"><span class="count"><i class="fa fa-facebook-square"></i> Like</span></a></li>
 
 
-        <li class="twitter"><a id="weixinhr" href="javascript:void(0);" title="扫码分享到微信" target="_blank"><span class="count"><i class="fa fa-twitter-square"></i> 分享到微信</span></a></li>
+        <li class="twitter"><a id="weixinhr" href="javascript:void(0);" onclick="share()"title="扫码分享到微信" target="_blank"><span class="count"><i class="fa fa-twitter-square"></i> 分享到微信</span></a></li>
  
 
 
