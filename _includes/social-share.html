@@ -1,20 +1,6 @@
 
 <script language="javascript" type="text/javascript">
 
-
-     $(function() {
-       //页面加载完成立即获取当前页面的url
-       // var temp=window.location.href;
-
-       // $('#weixinhr').click(function(){
-
-       //  var res = "http://www.superdizzy.com/weixin.html?url="+temp
-
-       //  window.location.href=res;
-       // });
-     });
-
-
     function share(){
        var thisurl=window.location.href;
        var targeturl="http://www.superdizzy.com/weixin.html?url="
@@ -22,55 +8,6 @@
        window.location.href=resurl;
 
     };
-
-  
-     function clik(){
-
-         //var browser_width = $(document.body).width(); 
-         var browser_width = $(window).width();
-         
-         //var browser_height = $(document.body).height();
-         var browser_height = $(window).height();
-
-
-         $("div.fa").css("width",browser_width); 
-         $("div.fa").css("height",browser_height); 
-
-         $('#fa').show();
-        
-     };
-
-     function close(){
-
-      alert('mmm');
-      
-      $('#imgid').hide();
-
-     };
-
-</script>
-
-
-
-<div id="fa" class="fa" style="background:rgba(255,204,51, 0.5);display:none;">
-<div id="imgid" align="center" style="width:50%;height:30%;border:1px solid black;position:relative;">
-     <span id="xxx">
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:void(0);" id="xxa" onclick="close()">x</a></span>
-     <span>
-          <img src="http://qr.topscan.com/api.php?text=http://www.superdizzy.com{{ page.url }}"/>
-     </span>
-</div>
-</div>
-
-
-
-
-
 
 
 <div class="social-share">
@@ -81,24 +18,6 @@
 
         <li class="twitter"><a id="weixinhr" href="javascript:void(0);" onclick="share()"title="扫码分享到微信" target="_blank"><span class="count"><i class="fa fa-twitter-square"></i> 分享到微信</span></a></li>
  
-
-
-        <li class="facebook2">
-           <a href="javascript:void(0);" id="atxt" onclick="clik()"</a>
-              <span class="count">
-                <i class="fa fa-twitter-square"></i>
-                    点击获取二维码分享到微信
-              </span>
-            </a>
-          </li>
-
-
-
-       <li class="">
-        <a href="javascript:void(0);" onclick="window.open('http://sns.qzone.qq.com/cgi-    bin/qzshare/cgi_qzshare_onekey?url='+encodeURIComponent(document.location.href));return false;" title="分享到QQ空间">
-        	<img src="http://qzonestyle.gtimg.cn/ac/qzone_v5/app/app_share/qz_logo.png" alt="分享到QQ空间" />
-        </a>
-      </li>
 
    </ul>
 </div><!-- /.social-share -->
