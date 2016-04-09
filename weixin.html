@@ -9,7 +9,9 @@
 
 <script type="text/javascript">
 
-//获得参数url
+$(function () {
+
+	//获得参数url
 var url = getQueryString("url"); //接收url这个名字的参数
 
         function getQueryString(value) {
@@ -17,8 +19,13 @@ var url = getQueryString("url"); //接收url这个名字的参数
             var r = window.location.search.substr(1).match(reg);
             if (r != null) return unescape(r[2]); return null;
         }
+ var text="http://qr.topscan.com/api.php?text="+url
 // 设置img 的src 
-$("#imgId").attr('src',url); 
+$("#imgId").attr('src',text); 
+	
+});
+
+
 </script>
 
 
